@@ -226,6 +226,7 @@ void makeOutputFile(vector<entry>& entries, vector<_class>& classes)
         bool isAnyAdded = false;
         for (int k = 0; k < entries.size(); k++)
             for (int m = 0; m < entries[k].properties.size(); m++)
+                // Сравниваем свойство записи и класса
                 if (entries[k].properties[m].name == classes[i].properties.name)
                 {
                     bool isOk = false;
@@ -247,6 +248,7 @@ void makeOutputFile(vector<entry>& entries, vector<_class>& classes)
         if (!isAnyAdded)    outputText[i] += "-";
     }
 
+    // Запись в файл
     ofstream output("output.txt");
 
     if (output.is_open())

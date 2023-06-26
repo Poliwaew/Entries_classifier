@@ -45,5 +45,6 @@ int main(int argc, char* argv[])
         return 0;
     }
 
+    // Создание файла вывода
     makeOutputFile(entries, classes);
 }
